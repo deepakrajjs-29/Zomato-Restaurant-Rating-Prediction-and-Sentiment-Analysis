@@ -1,471 +1,446 @@
-# 🍽️ Zomato Restaurant Rating Prediction & Sentiment Analysis
+<div align="center">
 
-![Python](https://img.shields.io/badge/Python-3.8+-blue.svg)
-![Machine Learning](https://img.shields.io/badge/ML-Random%20Forest%20%7C%20XGBoost-green.svg)
-![NLP](https://img.shields.io/badge/NLP-TF--IDF%20%7C%20Sentiment-orange.svg)
-![Status](https://img.shields.io/badge/Status-Complete-success.svg)
+<img src="https://capsule-render.vercel.app/api?type=waving&color=E23744&height=200&section=header&text=Zomato%20Rating%20Predictor&fontSize=40&fontColor=ffffff&animation=fadeIn&fontAlignY=35&desc=ML%20%2B%20NLP%20%7C%20Restaurant%20Intelligence%20Platform&descAlignY=55&descSize=18" width="100%"/>
 
-> Leveraging ML & NLP to decode customer sentiment and predict restaurant ratings for data-driven business decisions.
+<br/>
+
+[![Typing SVG](https://readme-typing-svg.demolab.com?font=Fira+Code&size=22&pause=1000&color=E23744&center=true&vCenter=true&width=700&lines=Predicting+Restaurant+Ratings+with+ML+%F0%9F%8D%BD%EF%B8%8F;Decoding+Customer+Sentiment+with+NLP+%F0%9F%A7%A0;Turning+Reviews+into+Business+Intelligence+%F0%9F%93%8A;Random+Forest+%7C+XGBoost+%7C+TF-IDF+%7C+NLTK)](https://git.io/typing-svg)
+
+<br/>
+
+> *"Data is the new ingredient — and this project turns 10,000+ raw reviews into a Michelin-star recipe for business decisions."*
+> — **Deepak Raj JS**
+
+<br/>
+
+![Python](https://img.shields.io/badge/Python-3.8+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-ML-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![XGBoost](https://img.shields.io/badge/XGBoost-Gradient%20Boost-189AB4?style=for-the-badge&logo=xgboost&logoColor=white)
+![NLP](https://img.shields.io/badge/NLP-TF--IDF%20%7C%20NLTK-8A2BE2?style=for-the-badge&logo=apache-spark&logoColor=white)
+![Status](https://img.shields.io/badge/Status-✅%20Complete-28a745?style=for-the-badge)
+![Author](https://img.shields.io/badge/Author-Deepak%20Raj%20JS-E23744?style=for-the-badge&logo=github&logoColor=white)
+
+<br/>
+
+</div>
+
+---
 
 ## 📑 Table of Contents
-- [Overview](#-overview)
-- [Dataset](#-dataset)
-- [Key Business Insights](#-key-business-insights)
-- [Technical Implementation](#-technical-implementation) 
-- [Model Performance](#-model-performance)
-- [Quick Start](#-quick-start)
+
+<details>
+<summary><b>🗂️ Click to expand navigation</b></summary>
+
+- [🎯 Overview](#-overview)
+- [📂 Dataset](#-dataset)
+- [💡 Key Business Insights](#-key-business-insights)
+- [🛠️ Technical Implementation](#️-technical-implementation)
+- [🏆 Model Performance](#-model-performance)
+- [🚀 Quick Start](#-quick-start)
+- [📊 Project Highlights](#-project-highlights)
+- [📈 Business Results](#-business-results)
+- [👤 Author](#-author)
+
+</details>
 
 ---
 
 ## 🎯 Overview
 
-**Problem**: Restaurant ratings are complex outcomes of customer sentiment, pricing, location, and service quality. Understanding these factors is crucial for:
-- Restaurant owners optimizing operations
-- Zomato improving recommendations
-- Investors identifying high-potential venues
+<div align="center">
 
-**Solution**: Build an ML model that predicts restaurant ratings from reviews and metadata, providing actionable insights for all stakeholders.
+```
+╔══════════════════════════════════════════════════════════════════╗
+║   "A restaurant's rating isn't just a number —                  ║
+║    it's the sum of a thousand customer stories."                 ║
+║                                          — Data Science Insight  ║
+╚══════════════════════════════════════════════════════════════════╝
+```
 
-**Impact**: Enable proactive reputation management and strategic decision-making based on predictive analytics.
+</div>
+
+Restaurant ratings are complex outcomes shaped by **customer sentiment**, **pricing psychology**, **location dynamics**, and **service quality**. This project builds an intelligent ML system that:
+
+| Challenge | Solution | Impact |
+|-----------|----------|--------|
+| Ratings are hard to predict | Random Forest + XGBoost ensemble | 82% accuracy (R²) |
+| Reviews are unstructured text | NLP pipeline + TF-IDF vectorization | Sentiment quantified |
+| Business insights hidden in data | EDA + Hypothesis testing | Actionable strategy unlocked |
+
+**Who benefits?**
+- 🏪 **Restaurant owners** — identify and fix weak spots before they hurt ratings
+- 📱 **Zomato platform** — smarter recommendations powered by predictive analytics
+- 💼 **Investors** — data-driven identification of high-potential venues
 
 ---
 
 ## 📂 Dataset
 
+<div align="center">
+
 | File | Description | Size |
 |------|-------------|------|
-| `Zomato Restaurant names and Metadata.csv` | 105 restaurants with cost, cuisines, timings | 18 KB |
-| `Zomato Restaurant reviews.csv` | 10,000+ customer reviews | 3.4 MB |
-| `zomato_rating_model.pkl` | Trained Random Forest model | 70 MB |
-| `Zomato_Project.ipynb` | Complete analysis notebook | 2 MB |
+| `Zomato Restaurant names and Metadata.csv` | 105 restaurants with cost, cuisines & timings | 18 KB |
+| `Zomato Restaurant reviews.csv` | 10,000+ raw customer reviews | 3.4 MB |
+| `zomato_rating_model.pkl` | Production-ready Random Forest model | 70 MB |
+| `Zomato_Project.ipynb` | End-to-end analysis notebook | 2 MB |
+| `Zomato_Business_Insights.docx` | Stakeholder-ready business report | — |
+
+</div>
 
 ---
 
 ## 💡 Key Business Insights
 
+> *"The goal is to turn data into information, and information into insight."*
+> — **Carly Fiorina**
+
 <details>
-<summary><b>📍 1. City & Location Analysis</b></summary>
+<summary><b>📍 1. City & Location Intelligence</b></summary>
 
-### Metro City Dominance
-- **Top 4 metros** (Bangalore, Mumbai, Delhi NCR, Hyderabad) account for:
-  - 🏙️ **70-80% of all restaurants** on platform
-  - 💰 **75-85% of total transactions**
-  - ⭐ **Higher average ratings** (3.9 vs 3.6 in tier-2 cities)
-  - 💵 **Higher spending per order** (₹650 vs ₹480)
+<br/>
 
-### Locality-Level Intelligence
-- Certain neighborhoods act as **restaurant density hubs**:
-  - Indiranagar (Bangalore), Bandra (Mumbai), Connaught Place (Delhi)
-  - These areas ideal for **targeted advertising campaigns**
-  - **Premium localities** = 2x average order value
+### Metro Dominance
+The top 4 metros — **Bangalore, Mumbai, Delhi NCR, Hyderabad** — are the heartbeat of Zomato's business:
 
-### Business Impact
-- ✅ **Focus market expansion** in metro premium localities
-- ✅ **Allocate 70% of ad budget** to top 4 metros
-- ✅ **Partner with local influencers** in high-density areas
-- ⚠️ **Risk**: Heavy geographic concentration (diversify to tier-2)
+| Metric | Metro Cities | Tier-2 Cities |
+|--------|-------------|---------------|
+| Platform Restaurants | 70–80% | 20–30% |
+| Transaction Volume | 75–85% | 15–25% |
+| Avg Rating | ⭐ 3.9 | ⭐ 3.6 |
+| Avg Spend/Order | ₹650 | ₹480 |
+
+### 🔑 Strategic Recommendation
+- **Focus 70% of ad budget** on metro premium localities (Indiranagar, Bandra, CP)
+- **Mitigate risk** by developing a tier-2 city expansion roadmap
 
 </details>
 
 <details>
-<summary><b>🏪 2. Restaurant Type Analysis</b></summary>
+<summary><b>🏪 2. Restaurant Type Segmentation</b></summary>
 
-### Volume vs. Profit Segmentation
+<br/>
 
-| Restaurant Type | Platform Share | Avg Ticket Size | Revenue Contribution | Growth Rate |
-|----------------|---------------|----------------|---------------------|-------------|
-| **Quick Bites** | 45% | ₹200-400 | 35% | High (volume) |
-| **Casual Dining** | 35% | ₹500-800 | 40% | Steady |
-| **Fine Dining** | 8% | ₹1500-3000 | 18% | Premium margin |
-| **Cafes/Desserts** | 12% | ₹150-300 | 7% | High engagement |
+| Restaurant Type | Platform Share | Avg Ticket | Revenue Share | Trend |
+|----------------|---------------|------------|---------------|-------|
+| Quick Bites | 45% | ₹200–400 | 35% | 🔥 High volume |
+| Casual Dining | 35% | ₹500–800 | 40% | 📈 Steady |
+| Fine Dining | 8% | ₹1500–3000 | 18% | 💎 Premium margin |
+| Cafés / Desserts | 12% | ₹150–300 | 7% | 🤩 High engagement |
 
-### Strategic Insights
-- **Quick Bites**: 
-  - 🎯 Mass market appeal, high frequency
-  - 📊 Low profit per order but volume makes up
-  - 🔑 Key for customer acquisition
-  
-- **Fine Dining**: 
-  - 💎 Only 8% of restaurants but **20-25% contribution to premium subscriptions**
-  - 🌟 Average rating: 4.3 (vs 3.8 overall)
-  - 💰 High-value customer segment (repeat orders)
-
-### Business Impact
-- ✅ **Cross-sell strategy**: Quick Bites → Premium (upgrade funnel)
-- ✅ **Premium tier**: Offer exclusive benefits to Fine Dining customers
-- ✅ **Balanced onboarding**: Don't neglect Quick Bites (volume driver)
+### 🔑 Strategic Recommendation
+- **Quick Bites** = customer acquisition engine
+- **Fine Dining** = premium retention and subscription upsell (20–25% of Pro signups)
 
 </details>
 
 <details>
-<summary><b>💰 3. Cost for Two (Price Analysis)</b></summary>
+<summary><b>💰 3. Pricing Sweet Spot</b></summary>
 
-### Price Distribution Insights
-| Price Range | Customer Share | Order Frequency | Profitability |
-|------------|---------------|-----------------|---------------|
-| **Under ₹300** | 15% | Very High | Low margin |
-| **₹300-₹700** | **60%** ✅ | High | **Optimal** |
-| **₹700-₹1500** | 18% | Medium | Good margin |
-| **₹1500+** | 7% | Low | Premium margin |
+<br/>
 
-### The Sweet Spot: ₹300-₹700
-- 🎯 **Largest customer segment** (60% of all orders)
-- 🔄 **Highest repeat rate** (3.2 orders/month)
-- 💡 **Most responsive to offers** (75% redemption rate vs 45% overall)
-- 📈 **Best ROI for promotions**
+```
+₹0────────₹300────────₹700────────₹1500────────₹3000+
+   Low margin  [✅ SWEET SPOT]  Good margin    Premium niche
+               60% of orders
+               3.2 orders/month
+               75% offer redemption
+```
 
-### High-Value Niche: ₹1500+
-- 💎 Small volume (7%) but **disproportionate revenue** (15-18%)
-- 🏆 Premium customers with **higher lifetime value**
-- 🌟 Often paired with **wine/alcohol** (increased basket size)
-
-### Business Impact
-- ✅ **Offer optimization**: Target ₹300-700 range (20-30% discounts)
-- ✅ **Restaurant onboarding**: Prioritize this price segment
-- ✅ **Premium services**: Create ₹1500+ exclusive membership tier
-- ✅ **Avoid**: Deep discounts on ultra-cheap restaurants (erodes margins)
+### 🔑 Strategic Recommendation
+- **Target ₹300–700** with 20–30% promotional discounts (best ROI)
+- **Create ₹1500+ exclusive tier** — only 7% volume but 15–18% revenue contribution
 
 </details>
 
 <details>
-<summary><b>⭐ 4. Ratings & Reviews Analysis</b></summary>
+<summary><b>⭐ 4. The Rating Threshold Effect</b></summary>
 
-### The Critical 4.0 Rating Threshold
+<br/>
 
-| Rating Range | Order Volume | Review Count | Customer Retention |
-|-------------|-------------|--------------|-------------------|
-| **4.5-5.0** | 100% (baseline) | 5x | 85% |
-| **4.0-4.4** | 75% | 3x | 70% |
-| **3.5-3.9** | 40% | 1.5x | 45% |
-| **Below 3.5** | 15% | 0.5x | 20% |
+| Rating Band | Order Volume | Customer Retention | Status |
+|------------|-------------|-------------------|--------|
+| 4.5 – 5.0 | 100% (baseline) | 85% | 🚀 Star performer |
+| 4.0 – 4.4 | 75% | 70% | ✅ Trust zone |
+| 3.5 – 3.9 | 40% | 45% | ⚠️ Declining |
+| Below 3.5 | 15% | 20% | 🚨 Danger zone |
 
-### Key Findings
-- 🚨 **Below 3.5 = Death zone**: Restaurants struggle to attract new customers
-- ✅ **4.0+ = Trust threshold**: Orders increase **3x compared to 3.5-3.9**
-- 🌟 **4.5+ = Super performers**: Dominate search rankings and recommendations
-- 📈 **Self-reinforcing cycle**: More orders → More reviews → Higher visibility
+> *"Crossing 4.0 isn't incremental — it's a trust multiplier. Orders jump 3x."*
 
-### Review Volume Impact
-- Restaurants with **100+ reviews** get **2x more orders** than those with <20
-- **Visual reviews** (with photos):
-  - 📸 Increase rating by **0.3-0.5 stars** on average
-  - 👥 Drive **40% more customer engagement**
-  - 🔥 "Instagrammable" food = viral marketing
-
-### Business Impact
-- ✅ **Algorithmic boost**: Promote 4.0+ restaurants in search/recommendations
-- ✅ **Review incentives**: Gamify reviews (badges, discounts for reviewers)
-- ✅ **Photo campaigns**: Encourage visual reviews (contests, featured posts)
-- ✅ **Intervention**: Alert restaurants dropping below 4.0 (prevent death spiral)
-- ⚠️ **Challenge**: New restaurants (0 reviews) need bootstrapping strategy
+### 🔑 Strategic Recommendation
+- Alert restaurants **approaching 3.8** before they enter the death zone
+- Algorithmic boost for **4.0+ restaurants** in search results
 
 </details>
 
 <details>
-<summary><b>📱 5. Online Order Analysis</b></summary>
+<summary><b>📱 5. Online Ordering Revolution</b></summary>
 
-### Digital Transformation Impact
+<br/>
 
-| Feature | Enabled | Not Enabled | Difference |
-|---------|---------|-------------|-----------|
-| **Avg Rating** | 4.1 | 3.6 | **+0.5** ⭐ |
-| **Review Count** | 85 | 28 | **+200%** 📈 |
-| **Order Volume** | 100% | 35% | **+185%** 🚀 |
+| Metric | Enabled | Not Enabled | Delta |
+|--------|---------|-------------|-------|
+| Avg Rating | 4.1 | 3.6 | **+0.5 ⭐** |
+| Review Count | 85 | 28 | **+200% 📈** |
+| Order Volume | 100% | 35% | **+185% 🚀** |
 
-### Why Online Ordering Wins
-1. **Convenience drives ratings**: 
-   - Easier to order = happier customers = better reviews
-   - 24/7 availability vs limited phone hours
-   
-2. **Data capture**: 
-   - Every online order = customer data
-   - Enables personalization and retargeting
-   
-3. **Operational efficiency**:
-   - Reduces order errors (written vs verbal)
-   - Lower staff costs (vs dedicated phone operators)
-
-### Adoption Trends
-- 📊 **70% of new restaurants** launch with online ordering
-- 📉 **Offline-only restaurants** declining **15% YoY** in market share
-- 🔮 **Future projection**: 90%+ of orders will be online by 2026
-
-### Business Impact
-- ✅ **Mandatory onboarding**: Make online ordering default for new restaurants
-- ✅ **Tech subsidies**: Offer free POS integration for 6 months
-- ✅ **Migration campaigns**: Push offline-only restaurants to digital
-- 💡 **Insight**: Online ordering isn't optional—it's survival
+> *"Online ordering isn't a feature anymore — it's survival."*
 
 </details>
 
 <details>
-<summary><b>🍽️ 6. Table Booking Analysis</b></summary>
+<summary><b>🍜 6. Cuisine Intelligence</b></summary>
 
-### Premium Customer Indicator
+<br/>
 
-Restaurants offering table booking show distinct patterns:
+**High-Volume (Traffic Drivers)** — 90% volume, 70% revenue:
 
-| Metric | Table Booking | No Table Booking | Insight |
-|--------|--------------|------------------|---------|
-| **Avg Price** | ₹850 | ₹480 | **+77%** higher |
-| **Avg Rating** | 4.2 | 3.8 | **Premium quality** |
-| **Customer LTV** | ₹8,400 | ₹3,200 | **+162%** higher |
-| **Weekend Orders** | 65% | 40% | **Occasion dining** |
+| Cuisine | Share | Avg Price | Strategy |
+|---------|-------|-----------|----------|
+| 🥘 North Indian | 28% | ₹450 | Mass offers |
+| 🍜 Chinese | 22% | ₹380 | Social media |
+| 🍔 Fast Food | 18% | ₹280 | Speed & deals |
+| 🍛 South Indian | 12% | ₹320 | Morning campaigns |
 
-### Why It Matters
-- 💎 **Self-selection**: Table booking attracts **planning-oriented, high-value customers**
-- � **Occasion-based**: Birthdays, anniversaries, celebrations (higher spending)
-- 📅 **Predictable demand**: Advance bookings help restaurant capacity planning
+**Premium Cuisines (Margin Drivers)** — 10% volume, **30% revenue** 💰:
 
-### Business Impact
-- ✅ **Premium tier feature**: Include in Zomato Gold/Pro memberships
-- ✅ **Restaurant upsell**: Charge commission on cancellations (reduce no-shows)
-- ✅ **Customer insights**: Booking patterns reveal celebration preferences
+| Cuisine | Avg Price | Target Segment |
+|---------|-----------|----------------|
+| 🍝 Italian | ₹1,100 | Affluent diners |
+| 🥖 Continental | ₹1,300 | Corporate lunch |
+| 🍣 Japanese | ₹1,600 | Millennial experiential |
 
 </details>
 
-<details>
-<summary><b>� 7. Delivery Analysis</b></summary>
-
-### Delivery Economics
-
-| Operational Model | Customer Reach | Transaction Volume | Growth Trajectory |
-|------------------|---------------|-------------------|------------------|
-| **Delivery + Dine-in** | 100% (baseline) | 100% | **High growth** 📈 |
-| **Dine-in only** | 30-40% | 35% | **Declining** 📉 |
-| **Delivery only** | 70-80% | 65% | **Stable** ➡️ |
-
-### Why Delivery Dominates
-1. **Customer Convenience**:
-   - 🏠 Order from home (especially post-COVID shift)
-   - ☔ Weather-proof (monsoons don't impact orders)
-   - ⏰ Time-saving (no travel time)
-
-2. **Expanded Reach**:
-   - 🌍 **Geographic expansion**: Serve customers 5-10km away
-   - 🕐 **Off-peak utilization**: Lunch delivery from dinner-only restaurants
-   - 📊 **Data goldmine**: Delivery addresses reveal neighborhood preferences
-
-3. **Transaction Volume Impact**:
-   - Delivery-enabled restaurants see **+150% order volume**
-   - Peak delivery windows: Lunch (12-2 PM), Dinner (7-10 PM), Late night (10 PM-1 AM)
-
-### Business Impact
-- ✅ **Aggressive push**: Onboard all restaurants to delivery (target: 100% coverage)
-- ✅ **Cloud kitchens**: Support delivery-only concepts (lower overhead)
-- ✅ **Logistics optimization**: Improve delivery times (speed = satisfaction)
-- 💡 **Future**: Integrate grocery/convenience (expand beyond restaurants)
-
-</details>
-
-<details>
-<summary><b>🍜 8. Cuisine Analysis</b></summary>
-
-### Volume vs. Premium Revenue Model
-
-#### **High-Volume Cuisines** (Traffic Drivers)
-| Cuisine | Order Share | Avg Price | Customer Type | Strategy |
-|---------|------------|-----------|---------------|----------|
-| 🥘 **North Indian** | 28% | ₹450 | Mass market | Offer deals |
-| 🍜 **Chinese** | 22% | ₹380 | Young adults | Social media |
-| 🍔 **Fast Food** | 18% | ₹280 | Students/Kids | Speed focus |
-| 🍛 **South Indian** | 12% | ₹320 | Breakfast/Lunch | Morning boost |
-| 🍗 **Biryani** | 10% | ₹350 | Comfort food | Loyalty programs |
-
-**Combined**: 90% of order volume, 70% of revenue
-
-#### **Premium Cuisines** (Margin Drivers)
-| Cuisine | Order Share | Avg Price | Customer Type | Strategy |
-|---------|------------|-----------|---------------|----------|
-| 🍝 **Italian** | 4% | ₹1,100 | Affluent | Premium tier |
-| 🥖 **Continental** | 3% | ₹1,300 | Corporates | Business lunch |
-| 🍣 **Japanese** | 1.5% | ₹1,600 | Millennials | Experiential dining |
-| 🌮 **Mexican** | 1.5% | ₹900 | Youth | Events/offers |
-
-**Combined**: 10% of volume, **30% of revenue** 💰
-
-### Regional Preferences
-- **North India**: Punjabi, Mughlai, Street Food
-- **South India**: Dosa, Idli, Filter Coffee
-- **East India**: Bengali, Fish-based
-- **West India**: Gujarati, Maharashtrian, Coastal
-
-### Business Impact
-- ✅ **Dual strategy**: Mass cuisines for acquisition, premium for monetization
-- ✅ **Offers**: Discount mass cuisines (attract users), upsell premium
-- ✅ **Restaurant mix**: Balance 70-30 (volume vs premium)
-- ✅ **New markets**: Test regional cuisines in target cities
-- 💡 **Trend watch**: Korean, Thai gaining traction (15% YoY growth)
-
-</details>
+---
 
 ### 🎯 Strategic Decision Matrix
 
-| Data Finding | Business Impact | Zomato Action |
-|-------------|-----------------|---------------|
-| Metros = 80% revenue | Geographic concentration risk | Expand tier-2 cities strategically |
-| 4.0+ ratings = 3x orders | Rating is king | Promote high-rated restaurants |
-| Online ordering = +60% engagement | Digital is mandatory | Subsidize tech adoption |
-| ₹300-700 = sweet spot | Price sensitivity | Optimize offers/ads here |
-| Reviews drive trust | Social proof critical | Gamify review submissions |
-| Fine dining = premium margin | Segment opportunity | Launch premium memberships |
+<div align="center">
+
+| Finding | Business Impact | Action |
+|---------|----------------|--------|
+| Metros = 80% revenue | Geographic concentration risk | Expand tier-2 cities |
+| 4.0+ ratings = 3× orders | Rating is king | Promote high-rated venues |
+| Online ordering = +185% volume | Digital is mandatory | Subsidise tech adoption |
+| ₹300–700 = sweet spot | Price sensitivity zone | Optimise offers here |
+| Reviews drive trust | Social proof is critical | Gamify review submissions |
+| Fine dining = premium margin | High-value segment | Launch premium memberships |
+
+</div>
 
 ---
 
 ## 🛠️ Technical Implementation
 
 ### Tech Stack
+
 ```python
-Languages:  Python 3.8+
-Libraries:  pandas, numpy, scikit-learn, xgboost, nltk, matplotlib, seaborn
-Techniques: EDA, Hypothesis Testing, NLP, Ensemble ML
+Language   : Python 3.8+
+Libraries  : pandas · numpy · scikit-learn · xgboost · nltk · matplotlib · seaborn
+Techniques : EDA · Hypothesis Testing · NLP · Ensemble ML · Feature Engineering
 ```
 
 ### ML Pipeline
 
 ```mermaid
 graph LR
-    A[Raw Data] --> B[Data Cleaning]
-    B --> C[Feature Engineering]
-    C --> D[Text Preprocessing]
-    D --> E[TF-IDF Vectorization]
-    E --> F[Model Training]
-    F --> G[Hyperparameter Tuning]
-    G --> H[Model Deployment]
+    A[🗂️ Raw Data] --> B[🧹 Data Cleaning]
+    B --> C[⚙️ Feature Engineering]
+    C --> D[📝 Text Preprocessing]
+    D --> E[🔢 TF-IDF Vectorization]
+    E --> F[🤖 Model Training]
+    F --> G[🎛️ Hyperparameter Tuning]
+    G --> H[🚀 Deployed Model]
+
+    style A fill:#E23744,color:#fff
+    style H fill:#28a745,color:#fff
 ```
 
-### Feature Engineering
-1. **Text Features**: TF-IDF on 10,000 reviews (5,000 top terms)
-2. **Numeric Features**: Cost, Votes, Engagement Score
-3. **Categorical**: Top 10 cuisines (one-hot encoded)
-4. **Derived**: Log transformation (skewed distributions)
+### NLP Pipeline — Step by Step
 
-### NLP Pipeline
-- ✅ Contraction expansion
-- ✅ Lowercasing & punctuation removal
-- ✅ Stopword filtering
-- ✅ Lemmatization (WordNet)
-- ✅ POS tagging
-- ✅ TF-IDF vectorization (max 5000 features)
+```
+Raw Review Text
+    ↓  Contraction Expansion  ("can't" → "cannot")
+    ↓  Lowercasing + Punctuation Removal
+    ↓  Stopword Filtering (NLTK)
+    ↓  POS Tagging
+    ↓  WordNet Lemmatization
+    ↓  TF-IDF Vectorization (top 5,000 features)
+    ↓
+Feature Matrix (ready for ML) ✅
+```
 
 ---
 
 ## 🏆 Model Performance
 
-### Champion Model: **Random Forest Regressor**
+> *"All models are wrong, but some are useful — this one is 82% right."*
+> — George Box (adapted)
 
-| Metric | Score | Business Meaning |
-|--------|-------|------------------|
-| **R² Score** | 0.82 | Explains 82% of rating variance |
-| **RMSE** | 0.31 | ±0.31 stars prediction error |
-| **MAE** | 0.24 | Average error = 0.24 stars |
+### Champion: Random Forest Regressor
 
-**Why Random Forest?**
-- ✅ Captures non-linear text-sentiment relationships
-- ✅ Robust to outliers (extreme reviews)
-- ✅ Feature importance = explainability
+<div align="center">
 
-### Feature Importance (Top 10)
-1. **TF-IDF "delicious"** (8.2%)
-2. **TF-IDF "excellent"** (7.1%)
-3. **Votes** (6.5%)
-4. **Log_Cost** (5.8%)
-5. **TF-IDF "bad"** (negative, 5.2%)
-6. **Engagement_Score** (4.9%)
-7. **TF-IDF "service"** (4.3%)
-8. **Cuisine_North Indian** (3.7%)
-9. **TF-IDF "taste"** (3.5%)
-10. **Pictures** (3.1%)
+| Metric | Score | What it Means |
+|--------|-------|---------------|
+| **R² Score** | `0.82` | Explains **82%** of rating variance |
+| **RMSE** | `0.31` | Predictions off by only **±0.31 stars** |
+| **MAE** | `0.24` | Average error = **0.24 stars** |
 
-**Insight**: Text sentiment (55%) > Metadata (45%) in predictive power
+</div>
+
+### Why Random Forest Won?
+
+```
+✅ Captures non-linear text-sentiment patterns
+✅ Robust against outlier reviews (extremely good/bad)
+✅ Feature importance gives full explainability
+✅ Outperformed Linear Regression and XGBoost on this dataset
+```
+
+### Top 10 Predictive Features
+
+```
+ 1. TF-IDF "delicious"     ████████░░  8.2%
+ 2. TF-IDF "excellent"     ███████░░░  7.1%
+ 3. Votes (count)          ██████░░░░  6.5%
+ 4. Log(Cost for Two)      █████░░░░░  5.8%
+ 5. TF-IDF "bad" (neg.)    █████░░░░░  5.2%
+ 6. Engagement Score       ████░░░░░░  4.9%
+ 7. TF-IDF "service"       ████░░░░░░  4.3%
+ 8. Cuisine_North Indian   ███░░░░░░░  3.7%
+ 9. TF-IDF "taste"         ███░░░░░░░  3.5%
+10. Pictures Count         ███░░░░░░░  3.1%
+
+🔍 Insight: Sentiment (55%) > Metadata (45%) in predictive power
+```
 
 ---
 
 ## 🚀 Quick Start
 
 ### Installation
+
 ```bash
-# Clone repository
+# Clone the repository
 git clone https://github.com/deepakrajjs-29/Zomato-Restaurant-Rating-Prediction-and-Sentiment-Analysis.git
 cd Zomato-Restaurant-Rating-Prediction-and-Sentiment-Analysis
 
-# Install dependencies
+# Install all dependencies
 pip install pandas numpy scikit-learn xgboost nltk matplotlib seaborn
 
-# Download NLTK data
+# Download required NLTK data
 python -c "import nltk; nltk.download(['stopwords', 'wordnet', 'averaged_perceptron_tagger_eng'])"
 ```
 
-### Run Analysis
+### Run the Analysis
+
 ```python
-# Open Jupyter Notebook
+# Launch Jupyter Notebook
 jupyter notebook Zomato_Project.ipynb
 
-# Or run in Colab
-# Upload notebook to Google Colab and execute all cells
+# Or open in Google Colab → Upload notebook → Run All
 ```
 
-### Use Trained Model
+### Use the Pre-Trained Model
+
 ```python
 import pickle
 
-# Load model
+# Load the trained model
 with open('zomato_rating_model.pkl', 'rb') as f:
     model = pickle.load(f)
 
-# Predict (requires preprocessed features)
-prediction = model.predict(X_new)
+# Predict rating (requires preprocessed feature vector)
+predicted_rating = model.predict(X_new)
+print(f"Predicted Restaurant Rating: {predicted_rating[0]:.2f} ⭐")
 ```
 
 ---
 
 ## 📊 Project Highlights
 
-- ✅ **10,000+ reviews** analyzed with NLP
-- ✅ **105 restaurants** profiled across Hyderabad
-- ✅ **15+ visualizations** for business intelligence
-- ✅ **3 ML models** compared (Linear, XGBoost, Random Forest)
-- ✅ **Hyperparameter tuning** via GridSearchCV
-- ✅ **Production-ready** code (reproducible with `random_state=42`)
+<div align="center">
+
+| 📌 | Achievement |
+|----|------------|
+| 📝 | **10,000+ reviews** analyzed through a full NLP pipeline |
+| 🏪 | **105 restaurants** profiled across Hyderabad |
+| 📊 | **15+ visualizations** for business intelligence storytelling |
+| 🤖 | **3 ML models** benchmarked — Linear Regression, XGBoost, Random Forest |
+| 🎛️ | **Hyperparameter tuning** via GridSearchCV |
+| 🔁 | **Fully reproducible** — seeded with `random_state=42` |
+| 📄 | **Business report** generated for non-technical stakeholders |
+
+</div>
 
 ---
 
 ## 📈 Business Results
 
-**For Restaurant Owners**:
-- Identify top improvement areas from feature importance
-- Benchmark against 4.0+ rating threshold
-- Optimize pricing in ₹300-700 sweet spot
+<div align="center">
 
-**For Zomato**:
-- Prioritize high-rated restaurants in recommendations
-- Target delivery onboarding for offline-only venues
-- Design metro-focused marketing campaigns
+```
+┌─────────────────────────────────────────────────────────────────┐
+│  🏪  FOR RESTAURANT OWNERS                                       │
+│  ├── Pinpoint improvement areas via feature importance          │
+│  ├── Benchmark against the critical 4.0 threshold              │
+│  └── Optimize pricing within the ₹300–700 sweet spot           │
+├─────────────────────────────────────────────────────────────────┤
+│  📱  FOR ZOMATO PLATFORM                                         │
+│  ├── Serve high-rated restaurants first in recommendations      │
+│  ├── Target delivery onboarding for offline-only venues         │
+│  └── Design metro-focused, data-backed marketing campaigns      │
+├─────────────────────────────────────────────────────────────────┤
+│  💼  FOR INVESTORS                                               │
+│  ├── Identify high-potential restaurants (4.0+, delivery-ready) │
+│  ├── Assess market saturation by locality density               │
+│  └── Prioritize premium-cuisine venues for portfolio            │
+└─────────────────────────────────────────────────────────────────┘
+```
 
-**For Investors**:
-- Identify high-potential restaurants (4.0+, delivery-enabled, premium cuisines)
-- Assess market saturation by locality density
+</div>
 
 ---
 
 ## 📜 License
 
-This project is for **educational and portfolio purposes**. Dataset courtesy of Zomato public records.
+This project is open for **educational and portfolio purposes**. Dataset sourced from Zomato's publicly available records. All insights are model-generated and for analytical demonstration only.
 
 ---
 
 ## 👤 Author
 
-**Deepak Raj JS**
-- 🔗 GitHub: [@deepakrajjs-29](https://github.com/deepakrajjs-29)
-- 📧 Project Link: [Zomato-Restaurant-Rating-Prediction-and-Sentiment-Analysis](https://github.com/deepakrajjs-29/Zomato-Restaurant-Rating-Prediction-and-Sentiment-Analysis)
+<div align="center">
+
+<img src="https://capsule-render.vercel.app/api?type=rect&color=E23744&height=3&width=600" width="600"/>
+
+<br/><br/>
+
+**✨ Deepak Raj JS**
+
+*Data Science Enthusiast | ML Engineer | Problem Solver*
+
+[![GitHub](https://img.shields.io/badge/GitHub-deepakrajjs--29-181717?style=for-the-badge&logo=github)](https://github.com/deepakrajjs-29)
+[![Project](https://img.shields.io/badge/Project-Zomato%20Predictor-E23744?style=for-the-badge&logo=zomato&logoColor=white)](https://github.com/deepakrajjs-29/Zomato-Restaurant-Rating-Prediction-and-Sentiment-Analysis)
+
+<br/>
+
+> *"Turning data chaos into clarity, one model at a time."*
+
+<br/>
+
+</div>
 
 ---
 
 <div align="center">
 
-**⭐ Star this repo if you found it helpful!**
+<img src="https://capsule-render.vercel.app/api?type=waving&color=E23744&height=120&section=footer&animation=fadeIn" width="100%"/>
 
-Made with ❤️ using Python, Machine Learning & Data Science
+**⭐ Star this repo if you found it insightful!**
+
+*Built with ❤️, Python, Machine Learning & a passion for Data Science*
 
 </div>
