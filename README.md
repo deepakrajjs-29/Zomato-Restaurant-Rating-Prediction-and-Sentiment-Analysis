@@ -386,8 +386,8 @@ graph LR
 ### Installation
 ```bash
 # Clone repository
-git clone https://github.com/Manojkumarw13/Zomato-Project.git
-cd Zomato-Project
+git clone https://github.com/deepakrajjs-29/Zomato-Restaurant-Rating-Prediction-and-Sentiment-Analysis.git
+cd Zomato-Restaurant-Rating-Prediction-and-Sentiment-Analysis
 
 # Install dependencies
 pip install pandas numpy scikit-learn xgboost nltk matplotlib seaborn
@@ -456,9 +456,9 @@ This project is for **educational and portfolio purposes**. Dataset courtesy of 
 
 ## 👤 Author
 
-**Manoj Kumar M**
-- 🔗 GitHub: [@Manojkumarw13](https://github.com/Manojkumarw13)
-- 📧 Project Link: [Zomato-Project](https://github.com/Manojkumarw13/Zomato-Project)
+**Deepak Raj JS**
+- 🔗 GitHub: [@deepakrajjs-29](https://github.com/deepakrajjs-29)
+- 📧 Project Link: [Zomato-Restaurant-Rating-Prediction-and-Sentiment-Analysis](https://github.com/deepakrajjs-29/Zomato-Restaurant-Rating-Prediction-and-Sentiment-Analysis)
 
 ---
 
